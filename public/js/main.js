@@ -127,3 +127,205 @@
 // ]);
 // console.log(resultat);
 
+// exo yt
+
+// for (let i = 0; i <= 5; i++) {
+//   if (i % 2 !== 0) console.log(i);
+// }
+
+// for (let i = 5; i >= 1; i--) {
+//     if (i % 2 !== 0) console.log(i);
+//   }
+
+// let i=0
+// while (i<=10) {
+//   console.log('bonjour', i);
+//   i= i + 1
+// }
+
+// const notes = [44,55,77,66,33,22]
+//   for (let i = 0; i < notes.length; i++) {
+//     console.log(i);
+//   }
+
+//   for (let i in notes) {
+//     console.log(notes[i]);
+//   }
+
+//  const bjrr = ";kqdshgmqsdghsmdg"
+//  for (let letter in bjrr) {
+//   console.log(letter);
+// }
+
+// let chiffre = prompt("entrez un chiffre");
+// // if (chiffre > 100 || chiffre < 0) {
+// //   console.log("le nombre pas entre 0 et 10");
+// // }
+
+// if (chiffre > 100 || chiffre < 0) {
+//   console.log("le nombre pas entre 0 et 100");
+// } else {
+// for (let i = chiffre; i > 0; i--) {
+//     console.log(i);
+// }
+//   }
+
+// if (chiffre > 100 || chiffre < 0) {
+//   console.log("le nombre pas entre 0 et 100");
+// } else {
+// for (let i = chiffre; i <= 100; i++) {
+//     console.log(i);
+// }
+//   }
+
+// let guess = 8
+// let chiffre
+// while (chiffre !== guess) {
+//   chiffre = prompt("votre chiffre") * 1
+//   if (chiffre < guess) {
+//     console.log("plus")
+//   } else if (chiffre > guess) {
+//     console.log("moins")
+//   }
+// }
+// console.log("termine")
+
+
+
+
+// 01/2023
+
+// Créer une fonction qui prend deux paramètres, et les additionne, et fait un console.log du résultat.(Additionner)
+
+function add(x, y) {
+  console.log(x + y);
+}
+add(2, 3);
+
+// // EXO2
+// // Créez une fonction qui prend deux paramètres, et soustrait le deuxième au premier, et faites un console.log du résultat.(Soustraction)
+
+function Soustraction(x, y) {
+  console.log(x - y);
+}
+Soustraction(5, 3);
+
+// // EXO3
+// // Créez une fonction qui prend deux paramètres, et les multiplie, et faites un console.log du résultat.(Multiplication)
+
+function Multiplication(x, y) {
+  console.log(x * y);
+}
+Multiplication(5, 3);
+
+// // EXO4
+// // Créez une fonction qui prend deux paramètres, et divise le premier par le deuxième, et faites un console.log du résultat.(Division)
+
+function Division(x, y) {
+  console.log(x / y);
+}
+Division(50, 2);
+
+// // EXO5
+// // Créez une fonction qui prend deux paramètres, et retourne le reste de la division du premier par le deuxième, et faites un console.log du résultat.(Modulo)
+
+function Modulo(x, y) {
+  console.log(x % y);
+}
+Modulo(10, 3);
+
+// // EXO6
+// // Créez une fonction qui prend un paramètre, et retourne le carré de ce nombre, et faites un console.log du résultat.(Racine carrée)
+
+function square(x) {
+  return x * x;
+}
+console.log(square(4));
+
+// // EXO7
+// // Créez une fonction qui prend deux paramètres, et retourne le premier nombre à l'exposant du deuxième, et faites un console.log du résultat.(Exposant)
+
+function exponent(base, exp) {
+  return Math.pow(base, exp);
+}
+
+console.log(exponent(2, 3));
+
+// // EXO8
+// // Créer une function [capitalize] qui transforme n'importe quelle chaine de caractères avec la première lettre en majuscule et le reste en minuscule;
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+console.log(capitalize("test"));
+
+// // EXO9
+// // Créer une function [calcul] ayant 3 paramètres
+// // nbr1 , operator , nbr2
+// // Je dois pouvoir mettre un nombre choisir entre + - * ou / et un second nombre et obtenir une réponse (Utilisez un switch)
+
+function calcule(nbr1, operator, nbr2) {
+  switch (operator) {
+    case "+":
+      return nbr1 + nbr2;
+      break;
+    case "-":
+      return nbr1 - nbr2;
+      break;
+    case "*":
+      return nbr1 * nbr2;
+      break;
+    case "/":
+      return nbr1 / nbr2;
+      break;
+    default:
+      return "Operateur non valide";
+  }
+}
+
+console.log(calcule(1, "+", 2));
+console.log(calcule(4, "-", 2));
+console.log(calcule(3, "*", 4));
+console.log(calcule(8, "/", 2));
+console.log(calcule(1, "$", 2));
+
+// EXO1
+// Créer une function [reverseNumber] qui retourne une série de nombre à l'envers (exemple si j'entre 851 elle me retourne 158)
+
+function reverseNumber(number) {
+  return number.toString().split('').reverse().join('');
+}
+console.log(reverseNumber(12345)); // affiche 54321
+
+// EXO2
+// Créer une function [divPar2] contenant un switch qui vérifie si un nombre est divisible par 2
+// Qui répond "Le num x est divisible par 2 x:2 = z"
+// Dans le cas ou ce n'est pas divisible il répond : "Ce nombre n'est pas divisible par 2"
+
+function divPar2(x) {
+  switch (x % 2) {
+    case 0:
+      return `Le num ${x} est divisible par 2 ${x}:2 = ${x/2}`;
+      break;
+    default:
+      return "Ce nombre n'est pas divisible par 2";
+  }
+}
+
+console.log(divPar2(4)); 
+console.log(divPar2(3)); 
+console.log(divPar2(0)); 
+
+
+// EXO3
+// Créer une fonction [logIn] qui va demander à l'utilisateur un mot de passe et vérifier s'il a bien entré "mdp" si oui, faites une alert "Vous êtes connecté", si non, redemander le mot de passe jusqu'à ce que l'utilisateur rentre "mdp"
+function logIn() {
+  let password = prompt("mot de passe=mdp");
+  while (password !== "mdp") {
+    password = prompt(" incorrect");
+  }
+  alert("OK");
+}
+logIn(); 
+
+
