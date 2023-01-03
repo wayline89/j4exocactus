@@ -319,13 +319,88 @@ console.log(divPar2(0));
 
 // EXO3
 // Créer une fonction [logIn] qui va demander à l'utilisateur un mot de passe et vérifier s'il a bien entré "mdp" si oui, faites une alert "Vous êtes connecté", si non, redemander le mot de passe jusqu'à ce que l'utilisateur rentre "mdp"
-function logIn() {
-  let password = prompt("mot de passe=mdp");
-  while (password !== "mdp") {
-    password = prompt(" incorrect");
-  }
-  alert("OK");
-}
-logIn(); 
 
+// function logIn() {
+//   let password = prompt("mot de passe=mdp");
+//   while (password !== "mdp") {
+//     password = prompt(" incorrect");
+//   }
+//   alert("OK");
+// }
+// logIn(); 
+
+
+// Écrivez une fonction qui prend un nombre en entrée et qui renvoie la somme des n premiers nombres naturels.
+// Par exemple, si on appelle la fonction avec 5 en entrée, elle devra renvoyer 15 (1 + 2 + 3 + 4 + 5).
+
+function sumFirstNNaturalNumbers(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(sumFirstNNaturalNumbers(9));
+
+
+// Écrivez une fonction qui prend un nombre en entrée et qui renvoie vrai si ce nombre est un nombre premier, et faux sinon.
+// Un nombre premier est un nombre qui n'est divisible que par 1 et par lui-même.
+// Par exemple, 2 est un nombre premier, alors que 4 ne l'est pas (il est divisible par 2).
+
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPrime(3)); // affiche true
+console.log(isPrime(4)); // affiche false
+
+
+// Écrivez une fonction qui prend un tableau de chaînes de caractères en entrée et qui renvoie une nouvelle liste contenant les chaînes de caractères triées par ordre alphabétique.
+// Par exemple, si on appelle la fonction avec ["girafe", "chien", "chat", "oiseau"] en entrée, elle devra renvoyer ["chat", "chien", "girafe", "oiseau"].
+
+function sortWords(words) {
+  return words.sort();
+}
+console.log(sortWords(["chat", "chien", "girafe", "oiseau"]));
+
+
+// Écrivez une fonction qui prend un nombre en entrée et qui renvoie la somme des chiffres de ce nombre.
+// Par exemple, si on appelle la fonction avec 123 en entrée, elle devra renvoyer 6 (1 + 2 + 3).
+
+
+function sumDigits(n) {
+  let sum = 0;
+  while (n > 0) {
+    sum += n % 10;
+    n = Math.floor(n / 10);
+  }
+  return sum;
+}
+
+console.log(sumDigits(123));
+
+
+
+// Écrivez une fonction qui prend un tableau de nombres en entrée et qui renvoie vrai si le tableau est un palindrome (c'est-à-dire si le tableau est le même lorsqu'on le lit de droite à gauche ou de gauche à droite), et faux sinon.
+// Par exemple, si on appelle la fonction avec [1, 2, 3, 2, 1] en entrée, elle devra renvoyer vrai. Si on l'appelle avec [1, 2, 3, 4, 5] en entrée, elle devra renvoyer faux.
+
+
+function isPalindrome(array) {
+
+  const reversedArray = array.slice().reverse();
+
+  return array.every((value, index) => value === reversedArray[index]);
+}
+console.log(isPalindrome([1, 2, 3, 2, 1])); 
+
+
+console.log(isPalindrome([1, 2, 3, 4, 5])); 
 
